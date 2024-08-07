@@ -167,14 +167,16 @@ public class Reservation {
         for (int day = checkInDay; day <= checkOutDay - 1; day++) {
             // Get the modifier for the current day
             double modifier = hotel.getDatePriceModifier(day);
+            System.out.println(modifier);
 
             if (modifier != 1.0){
                 basePrice /= 1.5;    
             }
 
             double dailyPrice = basePrice * modifier;
-            
+            System.out.println(dailyPrice);
             totalPrice += dailyPrice;
+            System.out.println(totalPrice);
         }
         
         double discountedPrice = applyDiscountCode(totalPrice);
