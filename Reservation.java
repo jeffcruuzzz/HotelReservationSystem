@@ -164,7 +164,7 @@ public class Reservation {
         Room room = this.getRoom();
         double basePrice = room.getPrice();
 
-        for (int day = checkInDay; day <= checkOutDay; day++) {
+        for (int day = checkInDay; day <= checkOutDay - 1; day++) {
             // Get the modifier for the current day
             double modifier = hotel.getDatePriceModifier(day);
 
