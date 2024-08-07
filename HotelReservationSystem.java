@@ -397,7 +397,6 @@ public class HotelReservationSystem {
                     // Update each room's price based on the new base price and date price modifier
                     for (Room room : hotel.getRooms()) {
                         double newPrice = room.getPrice() * rate; // Calculate new price based on the modifier
-                        room.setPrice(newPrice); // Update room's price
                     }
     
                     // Recalculate the total price for all reservations
